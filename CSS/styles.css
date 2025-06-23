@@ -65,7 +65,7 @@ main {
   }
 }
 
-@media (min-width: 200px) and (max-width: 760px) {
+@media (min-width: 200px) and (max-width: 791px) {
   main {
     display: flex;
     flex-direction: column;
@@ -77,5 +77,16 @@ main {
 
   .card-width {
     width: 100%;
+    padding: 1rem;
+  }
+
+  .area-table {
+    overflow-x: scroll;
+    padding: 1rem;
+  }
+
+  .text-menu {
+    font-size: 1.2rem;
+    margin-top: 1rem;
   }
 }
