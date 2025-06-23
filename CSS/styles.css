@@ -65,7 +65,7 @@ main {
   }
 }
 
-@media (min-width: 200px) and (max-width: 600px) {
+@media (min-width: 200px) and (max-width: 760px) {
   main {
     display: flex;
     flex-direction: column;
