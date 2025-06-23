@@ -181,6 +181,4 @@ export const listProduct = async (tBody, listagemNavLink) => {
     tBody.appendChild(tr);
     modalBody.appendChild(divModalBody);
   });
-
-  console.log(produtos);
 };
