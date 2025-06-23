@@ -90,6 +90,12 @@ export const listProduct = async (tBody, listagemNavLink) => {
               <input type="text" name="codigo" class="form-control" id="codigo" value="${produto.codigo}" disabled>
             </div>
           </div>
+          <div class="col">
+            <div class="mb-2 d-flex align-items-center justify-content-center gap-2">
+              <label for="categoria" class="form-label">Categoria:</label>
+              <input type="text" name="categoria" class="form-control" id="categoria" value="${produto.categoria}">
+            </div>
+          </div>
         </div>
       </div>
       `;
@@ -155,7 +161,8 @@ export const listProduct = async (tBody, listagemNavLink) => {
       modalBody.innerHTML = `
       Tem certeza que deseja excluir este produto? <br />
       <strong>Produto:</strong> ${produto.nome} <br />
-      <strong>Código:</strong> ${produto.codigo}
+      <strong>Código:</strong> ${produto.codigo} <br />
+      <strong>Categoria:</strong> ${produto.categoria}
       `;
 
       modalButtonDelete.addEventListener("click", async () => {

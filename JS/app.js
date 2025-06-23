@@ -13,13 +13,13 @@ const table = document.querySelector("area-table");
 
 const areaForm = document.querySelector(".form");
 const areaList = document.querySelector(".list");
-const areaEdit = document.querySelector(".edit");
+// const areaEdit = document.querySelector(".edit");
 
 const tBody = document.getElementById("tbody");
 let loading = document.getElementById("loading");
 
 areaList.style.display = "none";
-areaEdit.style.display = "none";
+// areaEdit.style.display = "none";
 
 form.addEventListener("submit", (e) => e.preventDefault());
 
@@ -28,7 +28,7 @@ cadastroNavLink.addEventListener("click", () => {
   // window.location.href = "cadastro.html";
   areaForm.style.display = "flex";
   areaList.style.display = "none";
-  areaEdit.style.display = "none";
+  // areaEdit.style.display = "none";
 });
 
 // Link de navegação da listagem
@@ -36,7 +36,7 @@ listagemNavLink.addEventListener("click", () => {
   // window.location.href = "listagem.html";
   areaList.style.display = "flex";
   areaForm.style.display = "none";
-  areaEdit.style.display = "none";
+  // areaEdit.style.display = "none";
 
   tBody.innerHTML = "";
 
@@ -52,12 +52,12 @@ listagemNavLink.addEventListener("click", () => {
 });
 
 // Link de navegação da edição
-editarNavLink.addEventListener("click", () => {
-  // window.location.href = "editar.html";
-  areaEdit.style.display = "flex";
-  areaForm.style.display = "none";
-  areaList.style.display = "none";
-});
+// editarNavLink.addEventListener("click", () => {
+//   // window.location.href = "editar.html";
+//   areaEdit.style.display = "flex";
+//   areaForm.style.display = "none";
+//   areaList.style.display = "none";
+// });
 
 buttonCriarProduto.addEventListener("click", async () => {
   await criarProduto(form, messageSuccess, loadingPost);
