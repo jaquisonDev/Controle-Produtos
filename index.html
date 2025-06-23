@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="CSS/styles.css" />
+
+    <title>Mercadinho JS</title>
+  </head>
+  <body class="overflow-hidden">
+    <main class="d-flex overflow-hidden">
+      <!-- Menu lateral -->
+      <aside class="bg-dark px-4">
+        <h6
+          class="text-white text-center pt-3 border-1 border-bottom border-light"
+        >
+          Menu
+        </h6>
+        <nav class="w-100 h-100 d-flex flex-column">
+          <ul class="list-unstyled d-flex flex-column mt-5 gap-4 w-100 h-100">
+            <li class="text-white pointer" id="cadastro">
+              <div class="d-flex align-items-center gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-journal-check"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0"
+                  />
+                  <path
+                    d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"
+                  />
+                  <path
+                    d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"
+                  />
+                </svg>
+                <span class="fw-semibold">Cadastro</span>
+              </div>
+            </li>
+            <li class="text-white pointer" id="listagem">
+              <div class="d-flex align-items-center gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-list-ul"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+                  />
+                </svg>
+                <span class="fw-semibold">Listagem</span>
+              </div>
+            </li>
+            <li class="text-white pointer" id="editar">
+              <div class="d-flex align-items-center gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-pencil-square"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
+                  />
+                </svg>
+                <span class="fw-semibold">Editar</span>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Formulário de cadastro -->
+      <div class="form">
+        <div class="card-width">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-content-center justify-content-between">
+                <h4 class="card-title mb-4">Cadastrar produto</h4>
+                <div class="message-success">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-check2-circle text-success"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"
+                    />
+                    <path
+                      d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"
+                    />
+                  </svg>
+                  <small class="text-success">Produto Cadastrado</small>
+                </div>
+
+                <div class="loading-post fw-semibold">Aguarde...</div>
+              </div>
+              <form id="formCriar" class="d-flex flex-column gap-3">
+                <input
+                  type="text"
+                  name="nome"
+                  class="form-control"
+                  placeholder="Nome..."
+                />
+                <input
+                  type="text"
+                  name="quantidade"
+                  class="form-control"
+                  placeholder="Quantidade..."
+                />
+                <input
+                  type="text"
+                  name="preco"
+                  class="form-control"
+                  placeholder="Preço..."
+                />
+                <input
+                  type="text"
+                  name="codigo"
+                  class="form-control"
+                  placeholder="Código..."
+                />
+                <button
+                  type="submit"
+                  id="criarProduto"
+                  class="btn btn-primary w-25"
+                >
+                  Cadastrar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Listagem de produtos -->
+      <div class="list">
+        <h4 class="card-title mb-5 fw-semibold">Listagem de produtos</h4>
+        <div class="card-width h-50 overflow-auto">
+          <table class="table overflow-auto">
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Ação</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              <div id="loading">Carregando...</div>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Modal title
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">...</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="button"
+                  id="actionUpdated"
+                  class="btn btn-primary"
+                  data-bs-dismiss="modal"
+                >
+                  Confirmar
+                </button>
+                <button
+                  type="button"
+                  id="actionDelete"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Confirmar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Edição de produtos -->
+      <div class="edit">
+        <div class="card-width">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Editar produto</h5>
+              <form id="formEditar" class="d-flex flex-column gap-3">
+                <input
+                  type="text"
+                  name="nome"
+                  class="form-control"
+                  placeholder="Nome..."
+                />
+                <input
+                  type="text"
+                  name="quantidade"
+                  class="form-control"
+                  placeholder="Quantidade..."
+                />
+                <input
+                  type="text"
+                  name="preco"
+                  class="form-control"
+                  placeholder="Preço..."
+                />
+                <input
+                  type="text"
+                  name="codigo"
+                  class="form-control"
+                  placeholder="Código..."
+                />
+                <button class="btn btn-primary w-25">Atualizar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="JS/app.js"></script>
+  </body>
+</html>
