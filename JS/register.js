@@ -5,15 +5,17 @@ export const criarProduto = async (form, message, loading) => {
   const quantidade = parseInt(data.get("quantidade"));
   const preco = parseFloat(data.get("preco"));
   const codigo = data.get("codigo");
+  const categoria = data.get("categoria");
 
   console.log({
     nome,
     quantidade,
     preco,
     codigo,
+    categoria,
   });
 
-  if (!nome || !quantidade || !preco || !codigo) {
+  if (!nome || !quantidade || !preco || !codigo || !categoria) {
     console.log("Preencha todos os campos");
     return;
   }
@@ -29,6 +31,7 @@ export const criarProduto = async (form, message, loading) => {
         quantidade,
         preco,
         codigo,
+        categoria,
       }),
     });
 
