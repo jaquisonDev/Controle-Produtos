@@ -20,6 +20,7 @@ export const listProduct = async (tBody, listagemNavLink) => {
     const tdQuantidade = document.createElement("td");
     const tdPreco = document.createElement("td");
     const tdCodigo = document.createElement("td");
+    const tdCategoria = document.createElement("td");
     const tdAction = document.createElement("td");
     const buttonDelete = document.createElement("button");
     const buttonUpdated = document.createElement("button");
@@ -28,6 +29,7 @@ export const listProduct = async (tBody, listagemNavLink) => {
     tdNome.textContent = produto.nome;
     tdPreco.textContent = produto.preco;
     tdQuantidade.textContent = produto.quantidade;
+    tdCategoria.textContent = produto.categoria;
     divModalBody.innerHTML = `Tem certeza que deseja deletar o produto ${produto.nome} de código ${produto.codigo}?`;
 
     buttonUpdated.classList.add(
@@ -62,16 +64,16 @@ export const listProduct = async (tBody, listagemNavLink) => {
       modalButtonUpdated.classList.add("btn-primary");
 
       modalBody.innerHTML = `
-      <div class="container text-center">
+      <div class="container">
         <div class="row">
-          <div class="col">
-            <div class="mb-2 d-flex align-items-center justify-content-center gap-2">
+          <div class="col-8">
+            <div class="mb-2">
               <label for="nome" class="form-label">Nome:</label>
               <input type="text" name="nome" class="form-control" id="nome" value="${produto.nome}">
             </div>
           </div>
-          <div class="col">
-            <div class="mb-2 d-flex align-items-center justify-content-center gap-2">
+          <div class="col-4">
+            <div class="mb-2">
               <label for="quantidade" class="form-label">Quantidade:</label>
               <input type="text" name="quantidade" class="form-control" id="quantidade" value="${produto.quantidade}">
             </div>
@@ -79,19 +81,19 @@ export const listProduct = async (tBody, listagemNavLink) => {
         </div>
         <div class="row">
           <div class="col">
-             <div class="mb-2 d-flex align-items-center justify-content-center gap-2">
+             <div class="mb-2">
               <label for="preco" class="form-label">Preço Un.:</label>
               <input type="text" name="preco" class="form-control" id="preco" value="${produto.preco}">
             </div>
           </div>
           <div class="col">
-            <div class="mb-2 d-flex align-items-center justify-content-center gap-2">
+            <div class="mb-2">
               <label for="codigo" class="form-label">Código:</label>
               <input type="text" name="codigo" class="form-control" id="codigo" value="${produto.codigo}" disabled>
             </div>
           </div>
           <div class="col">
-            <div class="mb-2 d-flex align-items-center justify-content-center gap-2">
+            <div class="mb-2">
               <label for="categoria" class="form-label">Categoria:</label>
               <input type="text" name="categoria" class="form-control" id="categoria" value="${produto.categoria}">
             </div>
@@ -183,6 +185,7 @@ export const listProduct = async (tBody, listagemNavLink) => {
     tr.appendChild(tdNome);
     tr.appendChild(tdPreco);
     tr.appendChild(tdQuantidade);
+    tr.appendChild(tdCategoria);
     tr.appendChild(tdAction);
     tdAction.appendChild(buttonUpdated);
     tdAction.appendChild(buttonDelete);
