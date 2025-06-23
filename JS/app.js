@@ -9,7 +9,7 @@ const editarNavLink = document.getElementById("editar");
 const buttonCriarProduto = document.getElementById("criarProduto");
 const messageSuccess = document.querySelector(".message-success");
 const loadingPost = document.querySelector(".loading-post");
-const table = document.querySelector("table");
+const table = document.querySelector("area-table");
 
 const areaForm = document.querySelector(".form");
 const areaList = document.querySelector(".list");
@@ -40,7 +40,7 @@ listagemNavLink.addEventListener("click", () => {
 
   tBody.innerHTML = "";
 
-  loading.style.display = "block";
+  loading.style.display = "flex";
 
   setTimeout(() => {
     listProduct(tBody, listagemNavLink);
