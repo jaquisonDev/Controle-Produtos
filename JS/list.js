@@ -116,6 +116,7 @@ export const listProduct = async (tBody, listagemNavLink) => {
                 ),
                 preco: parseFloat(document.getElementById("preco").value),
                 codigo: document.getElementById("codigo").value,
+                categoria: document.getElementById("categoria").value,
               }),
             }
           );
