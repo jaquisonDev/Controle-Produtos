@@ -65,11 +65,17 @@ main {
   }
 }
 
-@media (max-width: 500px) {
+@media (min-width: 200px) and (max-width: 600px) {
   main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  }
+
+  .card {
+    margin: 1rem;
+  }
+
+  .card-width {
+    width: 100%;
   }
 }

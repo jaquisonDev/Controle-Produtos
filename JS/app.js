@@ -9,6 +9,7 @@ const editarNavLink = document.getElementById("editar");
 const buttonCriarProduto = document.getElementById("criarProduto");
 const messageSuccess = document.querySelector(".message-success");
 const loadingPost = document.querySelector(".loading-post");
+const table = document.querySelector("table");
 
 const areaForm = document.querySelector(".form");
 const areaList = document.querySelector(".list");
@@ -41,8 +42,9 @@ listagemNavLink.addEventListener("click", () => {
 
   loading.style.display = "block";
 
-  setTimeout(() => {
-    listProduct(tBody, listagemNavLink);
+  setTimeout(async () => {
+    const response = await listProduct(tBody, listagemNavLink);
+    console.log(response);
   }, 2000);
 
   setTimeout(() => {
