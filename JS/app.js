@@ -42,9 +42,8 @@ listagemNavLink.addEventListener("click", () => {
 
   loading.style.display = "block";
 
-  setTimeout(async () => {
-    const response = await listProduct(tBody, listagemNavLink);
-    console.log(response);
+  setTimeout(() => {
+    listProduct(tBody, listagemNavLink);
   }, 2000);
 
   setTimeout(() => {
