@@ -28,8 +28,14 @@ cadastroNavLink.addEventListener("click", () => {
   // window.location.href = "cadastro.html";
   areaForm.style.display = "flex";
   areaList.style.display = "none";
+
+  cadastroNavLink.classList.add("active");
+  listagemNavLink.classList.remove("active");
+
   // areaEdit.style.display = "none";
 });
+
+cadastroNavLink.classList.add("active");
 
 // Link de navegação da listagem
 listagemNavLink.addEventListener("click", () => {
@@ -37,6 +43,9 @@ listagemNavLink.addEventListener("click", () => {
   areaList.style.display = "flex";
   areaForm.style.display = "none";
   // areaEdit.style.display = "none";
+
+  cadastroNavLink.classList.remove("active");
+  listagemNavLink.classList.add("active");
 
   tBody.innerHTML = "";
 

@@ -53,6 +53,14 @@ main {
   animation: pisca 1s infinite;
 }
 
+.active {
+  /* border: 1px solid #c3c3c3; */
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid #c3c3c3;
+}
+
 @keyframes pisca {
   0% {
     opacity: 1;
