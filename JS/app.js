@@ -93,6 +93,10 @@ inputQtd.addEventListener("keydown", (e) => {
   if (e.key.match(/^["a-zA-Z"]$/g)) {
     e.preventDefault();
   }
+
+  if (e.target.value.length > 3) {
+    e.target.value = e.target.value.slice(0, 3);
+  }
 });
 
 inputPreco.addEventListener("keydown", (e) => {
@@ -104,6 +108,10 @@ inputPreco.addEventListener("keydown", (e) => {
 inputCode.addEventListener("keydown", (e) => {
   if (e.key.match(/^["a-zA-Z"]$/g)) {
     e.preventDefault();
+  }
+
+  if (e.target.value.length > 3) {
+    e.target.value = e.target.value.slice(0, 3);
   }
 });
 
