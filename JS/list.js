@@ -1,3 +1,5 @@
+import { formatPrice } from "./formatNumberPrice.js";
+
 export const listProduct = async (tBody, listagemNavLink) => {
   const resposta = await fetch(
     "https://api-ten-alpha-15.vercel.app/api/produtos"
@@ -27,7 +29,7 @@ export const listProduct = async (tBody, listagemNavLink) => {
 
     tdCodigo.textContent = produto.codigo;
     tdNome.textContent = produto.nome;
-    tdPreco.textContent = produto.preco;
+    tdPreco.textContent = formatPrice(produto.preco);
     tdQuantidade.textContent = produto.quantidade;
     tdCategoria.textContent = produto.categoria;
     divModalBody.innerHTML = `Tem certeza que deseja deletar o produto ${produto.nome} de código ${produto.codigo}?`;
