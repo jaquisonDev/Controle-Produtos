@@ -2,6 +2,11 @@ import { listProduct } from "./list.js";
 import { criarProduto } from "./register.js";
 
 const form = document.getElementById("formCriar");
+const inputName = document.getElementById("nome");
+const inputQtd = document.getElementById("quantidade");
+const inputPreco = document.getElementById("preco");
+const inputCode = document.getElementById("codigo");
+const inputCategory = document.getElementById("categoria");
 
 const cadastroNavLink = document.getElementById("cadastro");
 const listagemNavLink = document.getElementById("listagem");
@@ -70,4 +75,40 @@ listagemNavLink.addEventListener("click", () => {
 
 buttonCriarProduto.addEventListener("click", async () => {
   await criarProduto(form, messageSuccess, loadingPost);
+});
+
+document.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    buttonCriarProduto.click();
+  }
+});
+
+inputName.addEventListener("keydown", (e) => {
+  if (e.key.match(/^["0-9"]$/g)) {
+    e.preventDefault();
+  }
+});
+
+inputQtd.addEventListener("keydown", (e) => {
+  if (e.key.match(/^["a-zA-Z"]$/g)) {
+    e.preventDefault();
+  }
+});
+
+inputPreco.addEventListener("keydown", (e) => {
+  if (e.key.match(/^["a-zA-Z"]$/g)) {
+    e.preventDefault();
+  }
+});
+
+inputCode.addEventListener("keydown", (e) => {
+  if (e.key.match(/^["a-zA-Z"]$/g)) {
+    e.preventDefault();
+  }
+});
+
+inputCategory.addEventListener("keydown", (e) => {
+  if (e.key.match(/^["0-9"]$/g)) {
+    e.preventDefault();
+  }
 });
